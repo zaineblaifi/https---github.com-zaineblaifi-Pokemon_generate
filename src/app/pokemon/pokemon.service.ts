@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { POKEMONS } from './mock-pokemon-list';
 import { Pokemon } from './pokemon';
 
-@Injectable({
-  providedIn: 'root' //on va utiliser la meme instance de service sur toute l'application
-})
+@Injectable(/*{
+  //providedIn: 'root' //on va utiliser la meme instance de service sur toute l'application
+}*/)
 export class PokemonService {
   getPokemonList(): Pokemon[] {
     return POKEMONS;
