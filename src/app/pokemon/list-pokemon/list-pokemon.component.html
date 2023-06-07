@@ -1,0 +1,26 @@
+<div class="container" style="background-color: #e2ebea;">
+    <div class="row">
+        <div *ngFor="let pokemon of pokemonList" class="col m-4 s-6">
+            <div (click)="goToDetail(pokemon)" class="card-horizontal" style=" border-radius:6%;"   appBorderCard>
+                <div >
+                    <img [src]="pokemon.picture" class="card-image" />
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p class="center"
+                        style="color: #009688; font-size: x-large; "> {{ pokemon.name | uppercase}}</p>
+                        
+                        <p class="center" style="font-size: medium;"><small> Created at {{ pokemon.created | date:"dd/mm/yyyy"}}</small></p><!--date: pipe-->
+                        <div class="center">
+                        <span *ngFor="let type of pokemon.types" class="{{type | pokemonTypeColor}} " style="col  center-align   ;">
+                            {{type}}
+                        </span></div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</div>
+
