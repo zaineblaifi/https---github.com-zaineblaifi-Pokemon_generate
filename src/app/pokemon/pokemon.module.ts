@@ -5,11 +5,13 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
 import { BorderCardDirective } from './border-card.directive';
 import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 import { RouterModule, Routes } from '@angular/router';
+import { TypesListComponent } from './types-list/types-list.component';
 
 const pokemonRoutes: Routes = [
   
     {path: 'pokemons', component: ListPokemonComponent},
     {path :'pokemon/:id', component: DetailPokemonComponent},
+    {path :'types', component: TypesListComponent}
   
 ];
 
@@ -18,7 +20,8 @@ const pokemonRoutes: Routes = [
     ListPokemonComponent,
     BorderCardDirective,
     PokemonTypeColorPipe,
-    DetailPokemonComponent
+    DetailPokemonComponent,
+    TypesListComponent
     
   ],
   imports: [
