@@ -9,13 +9,17 @@ import { TypesListComponent } from './types-list/types-list.component';
 import { PokemonService } from './pokemon.service';
 import { FormsModule } from '@angular/forms';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
+import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';
 
 
 const pokemonRoutes: Routes = [
-  
+    {path: 'editer/pokemon/:id', component: EditPokemonComponent},
     {path: 'pokemons', component: ListPokemonComponent},
     {path :'pokemon/:id', component: DetailPokemonComponent},
-    {path :'types', component: TypesListComponent}
+    
+    {path :'types', component: TypesListComponent},
+    
+
   
 ];
 
@@ -27,6 +31,7 @@ const pokemonRoutes: Routes = [
     DetailPokemonComponent,
     TypesListComponent,
     PokemonFormComponent,
+    EditPokemonComponent,
     
     
   ],
